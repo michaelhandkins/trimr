@@ -3,8 +3,15 @@
   <br />
   <h1 class="text-center">Haircut Pricing</h1>
   <br />
-  <%= link_to "New Haircut", new_barber_haircut_path, class: 'btn btn-primary' %>
-  <br />
+    <%= link_to "New Haircut", new_barber_barber_haircut_path(current_barber), class: 'btn btn-primary' %>
+    <br />
+  <% @haircuts.each do |haircut| %>
+    <hr />
+    <h3><%= haircut.haircut_name %></h3>
+    <p><%= haircut.description %></p>
+    <p><b>Cost:</b> $<%= haircut.cost %></p>
+    <br />
+  <% end %>
   <br />
 </div>
 <br />

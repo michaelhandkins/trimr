@@ -2,7 +2,7 @@
 <div class="booyah-box col-10 offset-1">
   <h2>Create a Haircut</h2>
   <br />
-  <%= simple_form_for @haircut, url: barber_haircuts_path do |f| %>
+  <%= simple_form_for @haircut, url: barber_barber_haircuts_path(current_barber) do |f| %>
   <%= f.input :haircut_name %>
   <%= f.input :description %>
   <%= f.input :cost %>

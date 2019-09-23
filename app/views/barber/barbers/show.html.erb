@@ -4,7 +4,7 @@
   <p><b>Bio:</b> <%= @barber.barber_bio %></p>
   <p><b>Phone:</b> <%= @barber.phone_number %></p>
   <p><b>Zip Code:</b> <%= @barber.zip_code %></p>
-  <%= link_to "Pricing", barber_haircuts_path, class: 'btn btn-primary' %>
+  <%= link_to "Pricing", barber_barber_haircuts_path(@barber), class: 'btn btn-primary' %>
   <br />
   <br />
 </div>
