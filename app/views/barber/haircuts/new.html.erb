@@ -1,0 +1,13 @@
+<br />
+<div class="booyah-box col-10 offset-1">
+  <h2>Create a Haircut</h2>
+  <br />
+  <%= simple_form_for @haircut, url: barber_haircuts_path do |f| %>
+  <%= f.input :haircut_name %>
+  <%= f.input :description %>
+  <%= f.input :cost %>
+  <br />
+  <%= f.submit "Create Haircut", class: 'btn btn-primary' %>
+  <br />
+  <br />
+<% end %>

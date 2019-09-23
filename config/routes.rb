@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :barbers, only: [:index, :show]
   namespace :barber do
     resources :barbers, only: [:new, :create, :show]
+    resources :haircuts, only: [:new, :create, :index]
   end
 end
