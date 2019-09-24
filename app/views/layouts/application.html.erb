@@ -26,7 +26,11 @@
         <ul class="navbar-nav ml-auto">
           <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "Dashboard", barber_barber_path(current_user.barbers.first), class: 'nav-link' %>
+          <% if current_user.barbers %>
+            <%= link_to "Dashboard", barber_barber_path(current_user.barbers.first), class: 'nav-link' %>
+          <% else %>
+            <%= link_to "Dashboard", '#', class: 'nav-link' %>
+          <% end %>
         </li>
         <li class="nav-item">
           <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: 'nav-link' %>
