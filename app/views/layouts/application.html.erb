@@ -11,7 +11,7 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Trimr</a>
+      <a class="navbar-brand" href="/">Trimr</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -26,7 +26,7 @@
         <ul class="navbar-nav ml-auto">
           <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "Dashboard", "#", class: 'nav-link' %>
+          <%= link_to "Dashboard", barber_barber_path(current_user.barbers.first), class: 'nav-link' %>
         </li>
         <li class="nav-item">
           <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: 'nav-link' %>

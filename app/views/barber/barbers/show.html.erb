@@ -4,7 +4,14 @@
   <p><b>Bio:</b> <%= @barber.barber_bio %></p>
   <p><b>Phone:</b> <%= @barber.phone_number %></p>
   <p><b>Zip Code:</b> <%= @barber.zip_code %></p>
-  <%= link_to "Pricing", barber_barber_haircuts_path(@barber), class: 'btn btn-primary' %>
+  <p><b>Pricing:</b></p>
+  <% @barber.haircuts.each do |haircut| %>
+    <hr />
+    <p><%= haircut.haircut_name %> - $<%= haircut.cost %></p>
+    <p><%= haircut.description %></p>
+  <% end %>
+  <hr />
+  <%= link_to "Add Haircut", barber_barber_haircuts_path(@barber), class: 'btn btn-primary' %>
   <br />
   <br />
 </div>
