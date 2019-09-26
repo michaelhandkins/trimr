@@ -13,6 +13,9 @@
   <hr />
   <%= link_to "Add Haircut", barber_barber_haircuts_path(@barber), class: 'btn btn-primary' %>
   <br />
+  <% if @barber.square_embed_code %>
+    <%= @barber.square_embed_code %>
+  <% end %>
   <br />
 </div>
 <br />

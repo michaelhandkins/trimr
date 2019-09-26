@@ -1,8 +1,10 @@
 <br />
 <div class="booyah-box col-10 offset-1">
   <h1 class="text-center">Book A Barber</h1>
-  <%= @barbers.each do |barber| %>
-    <h3><%= barber.name %></h3>
+  <% @barbers.each do |barber| %>
+    <h3><%= link_to barber.name, barber_barber_path(barber) %></h3>
+    <p><b><%= barber.zip_code %></b></p>
+    <p><i><%= barber.barber_bio %></i></p>
   <% end %>
 </div>
 <br />

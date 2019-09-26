@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_23_233006) do
+ActiveRecord::Schema.define(version: 2019_09_26_210147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2019_09_23_233006) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "square_embed_code"
     t.index ["user_id"], name: "index_barbers_on_user_id"
     t.index ["zip_code"], name: "index_barbers_on_zip_code"
   end
