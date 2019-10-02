@@ -21,7 +21,7 @@ class Barber::BarbersController < ApplicationController
   private
 
   def barber_params
-    params.require(:barber).permit(:name, :phone_number, :zip_code, :barber_bio)
+    params.require(:barber).permit(:name, :phone_number, :zip_code, :barber_bio, :square_embed_code)
   end
 
 end
