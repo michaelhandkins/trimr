@@ -66,3 +66,5 @@ gem 'jquery-rails'
 gem 'devise'
 
 gem 'simple_form'
+
+gem 'font-awesome-sass', '~> 5.11.2'
