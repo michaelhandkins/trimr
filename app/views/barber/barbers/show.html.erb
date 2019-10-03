@@ -10,9 +10,14 @@
     <p><%= haircut.haircut_name %> - $<%= haircut.cost %></p>
     <p><%= haircut.description %></p>
   <% end %>
+  <%= link_to "Add Haircut", barber_barber_haircuts_path(@barber), class: 'btn btn-success' %>
+  <br />
   <hr />
-  <%= link_to "Add Haircut", barber_barber_haircuts_path(@barber), class: 'btn btn-primary' %>
-  <%= @barber.square_embed_code %>
+  <div class="text-center">
+  <%= link_to "Book An Appointment", @barber.booking_site_url, class: 'btn btn-primary' %>
+  </div>
+  <br />
+  Embed code not being embedded: @barber.square_embed_code
   <br />
 </div>
 <br />
