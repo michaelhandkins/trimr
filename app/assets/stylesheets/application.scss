@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import url('https://fonts.googleapis.com/css?family=Grenze&display=swap');
 
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -71,13 +72,14 @@ body {
 
 .frosty h1 {
   padding-top: 15px;
-  font-family: "Helvetica Neue", Helvetica;
+  font-family: 'Grenze', serif;
+  font-size: 100px;
   font-weight: 100;
   text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
 }
 
 .frosty h2 {
-  font-family: "Helvetica Neue", Helvetica;
+  font-family: 'Grenze', serif;
   font-weight: 200;
   text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
 }
@@ -86,3 +88,6 @@ body {
   border-radius: 0;
 }
 
+.navbar-brand {
+  font-family: 'Grenze', serif;
+}
