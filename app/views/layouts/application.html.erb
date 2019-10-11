@@ -66,11 +66,13 @@
         <div class="container">
           <div class="row">
             <div class="col-12 col-sm-3">
-              <b>Teachers</b>
-              <br />
               <%= link_to 'Become a Barber', new_barber_barber_path  %>
               <br />
-              <%= link_to 'My Dashboard', '#' %>
+              <% if current_user.barbers == true %>
+                <%= link_to 'My Dashboard', barber_barber_path(current_user.barbers.first) %>
+              <% else %>
+                <%= link_to 'My Dashboard', dashboard_path %>
+              <% end %>
             </div>
             <div class="col-12 col-sm-3">
               <b>About</b>
