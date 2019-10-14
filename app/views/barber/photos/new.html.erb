@@ -1,0 +1,15 @@
+<br />
+<div class="col-10 offset-1 booyah-box">
+  <br />
+  <h2>Add a Photo</h2>
+  <br />
+  <%= simple_form_for @photo, url: barber_barber_photos_path(current_barber) do |f| %>
+    <%= f.input :photo %>
+    <%= f.input :caption %>
+    <br />
+    <%= f.submit "Add Photo", class: 'btn btn-primary' %>
+    <br />
+  <% end %>
+  <br />
+  
+</div>

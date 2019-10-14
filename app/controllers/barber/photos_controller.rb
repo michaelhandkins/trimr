@@ -1,7 +1,7 @@
 class Barber::PhotosController < ApplicationController
   
   def new
-    @photo = current_barber.photo.new
+    @photo = current_barber.photos.new
   end
 
   def create

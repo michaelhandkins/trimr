@@ -19,9 +19,11 @@
   <br />
   <h2 class="text-center">Gallery</h2>
   <hr />
-  <% if @barber.photo == true %>
-    <%= @barber.photo.all %>
+  <% if @barber.photos == true %>
+    <%= @barber.photos.all %>
   <% end %>
+  <%= link_to "Add Photo", new_barber_barber_photo_path(@barber), class: 'btn btn-primary' %>
+  <br />
   <br />
 </div>
 <br />
