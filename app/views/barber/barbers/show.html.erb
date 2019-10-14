@@ -7,7 +7,7 @@
   <p><b>Pricing:</b></p>
   <% @barber.haircuts.each do |haircut| %>
     <hr />
-    <p><%= haircut.haircut_name %> - $<%= haircut.cost %></p>
+    <p><b><%= haircut.haircut_name %></b> - $<%= haircut.cost %></p>
     <p><%= haircut.description %></p>
   <% end %>
   <%= link_to "Add Haircut", barber_barber_haircuts_path(@barber), class: 'btn btn-success' %>
