@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   namespace :barber do
     resources :barbers, only: [:new, :create, :show] do
       resources :haircuts, only: [:new, :create, :index]
+      resources :photos, only: [:new, :create, :index]
     end
   end
 end
