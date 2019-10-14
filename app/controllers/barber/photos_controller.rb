@@ -10,7 +10,7 @@ class Barber::PhotosController < ApplicationController
   end
 
   def index
-
+    @photos = current_barber.photos.all
   end
 
   private
