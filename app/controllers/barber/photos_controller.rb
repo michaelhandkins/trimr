@@ -5,7 +5,7 @@ class Barber::PhotosController < ApplicationController
   end
 
   def create
-    @photo = current_barber.photos.create(barber_params)
+    @photo = current_barber.photos.create(photo_params)
     redirect_to barber_barber_path(current_barber)
   end
 
