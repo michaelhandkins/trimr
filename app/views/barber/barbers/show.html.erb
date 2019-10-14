@@ -17,7 +17,7 @@
   <%= link_to "Book An Appointment", @barber.booking_site_url, class: 'btn btn-primary' %>
   </div>
   <br />
-  <h2 class="text-center">Gallery</h2>
+  <h2 class="text-center"><%= link_to "Gallery", barber_barber_photos_path(@barber) %></h2>
   <hr />
   <% if @barber.photos.present? %>
     <% @barber.photos.each do |photo| %>
