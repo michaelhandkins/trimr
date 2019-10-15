@@ -4,6 +4,39 @@
   <p><b>Bio:</b> <%= @barber.barber_bio %></p>
   <p><b>Phone:</b> <%= @barber.phone_number %></p>
   <p><b>Zip Code:</b> <%= @barber.zip_code %></p>
+
+  <!--- Google Map begins --->
+
+  <% if @barber.latitude.present? && @barber.longitude.present? %>
+  
+    <script>
+
+      function initMap() {
+        var myLatLng = {lat: <%= @barber.latitude %>, lng: <%= @barber.longitude %>};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+      }
+    </script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSXb6nfNz9xkNmk2X6TevXD1BTaXwBFxM&callback=initMap">
+    </script>
+
+    <div id="map"></div>
+
+  <% end %>
+
+  <!--- Google Maps Ends --->
+
   <p><b>Pricing:</b></p>
   <% @barber.haircuts.each do |haircut| %>
     <hr />
