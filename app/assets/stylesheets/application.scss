@@ -92,7 +92,18 @@ body {
   font-family: 'Grenze', serif;
 }
 
-img {
-  max-width: 70%;
-  height: 250px;
+.box {
+  float: left;
+  width: 42.5%;
+  margin-left: 5%;
+  margin-top: 80px;
+}
+
+.gallery-pic {
+  width: 100%;
+  border:3px solid white;
+}
+
+.clear {
+  clear: both;
 }

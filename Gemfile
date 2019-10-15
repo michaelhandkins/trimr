@@ -70,3 +70,5 @@ gem 'simple_form'
 gem 'font-awesome-sass', '~> 5.11.2'
 
 gem 'carrierwave', '~> 2.0'
+
+gem "geocoder"

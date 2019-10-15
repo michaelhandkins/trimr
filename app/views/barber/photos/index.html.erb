@@ -5,7 +5,9 @@
   <br >
   <div class="row">
   <% @photos.each do |photo| %>
-    <%= image_tag photo.photo.url %>
+    <div class="box">
+      <%= image_tag photo.photo.url, class: 'gallery-pic' %>
+    </div>
   <% end %>
   </div>
   <br />
