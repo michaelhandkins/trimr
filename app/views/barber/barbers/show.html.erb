@@ -36,8 +36,9 @@
   <% end %>
 
   <!--- Google Maps Ends --->
+  <br />
 
-  <p><b>Pricing:</b></p>
+  <h3 class="text-center">Pricing:</h3>
   <% @barber.haircuts.each do |haircut| %>
     <hr />
     <p><b><%= haircut.haircut_name %></b> - $<%= haircut.cost %></p>
@@ -53,9 +54,13 @@
   <h2 class="text-center"><%= link_to "Gallery", barber_barber_photos_path(@barber) %></h2>
   <hr />
   <% if @barber.photos.present? %>
-    <% @barber.photos.each do |photo| %>
-      <%= image_tag photo.photo.url class: 'img-fluid' %>
-    <% end %>
+    <div class="row">
+      <% @barber.photos.each do |photo| %>
+        <div class="box2">
+          <%= image_tag photo.photo.url, class: 'gallery-pic' %>
+        </div>
+      <% end %>
+    </div>
   <% end %>
   <br />
   <br />
