@@ -74,3 +74,7 @@ gem 'carrierwave', '~> 2.0'
 gem "geocoder"
 
 gem "figaro"
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.8'
+end
