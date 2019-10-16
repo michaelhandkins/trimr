@@ -1,0 +1,2 @@
+module Barber::BarberHelper
+end

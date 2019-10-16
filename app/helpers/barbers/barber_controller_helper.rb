@@ -1,0 +1,2 @@
+module Barbers::BarberControllerHelper
+end

@@ -1,0 +1,74 @@
+<br />
+<div class="booyah-box col-10 offset-1">
+  <div class="text-center">
+    <%= image_tag @barber.profile_picture.url, class: 'me' %>
+  </div>
+  <h1 class="text-center"><%= @barber.name %></h1>
+  <p><b>Bio:</b> <%= @barber.barber_bio %></p>
+  <p><b>Phone:</b> <%= @barber.phone_number %></p>
+  <p><b>Zip Code:</b> <%= @barber.zip_code %></p>
+
+  <!--- Google Map begins --->
+
+  <% if @barber.latitude.present? && @barber.longitude.present? %>
+  
+    <script>
+
+      function initMap() {
+        var myLatLng = {lat: <%= @barber.latitude %>, lng: <%= @barber.longitude %>};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+      }
+    </script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSXb6nfNz9xkNmk2X6TevXD1BTaXwBFxM&callback=initMap">
+    </script>
+
+    <div id="map"></div>
+
+  <% end %>
+
+  <!--- Google Maps Ends --->
+  <br />
+
+  <h3 class="text-center">Pricing:</h3>
+  <% @barber.haircuts.each do |haircut| %>
+    <hr />
+    <p><b><%= haircut.haircut_name %></b> - $<%= haircut.cost %></p>
+    <p><%= haircut.description %></p>
+  <% end %>
+  <%= link_to "Add Haircut", barber_barber_haircuts_path(@barber), class: 'btn btn-success' %>
+  <br />
+  <hr />
+  <div class="text-center">
+  <%= link_to "Book An Appointment", @barber.booking_site_url, class: 'btn btn-primary' %>
+  </div>
+  <br />
+  <h2 class="text-center"><%= link_to "Gallery", barber_barber_photos_path(@barber) %></h2>
+  <hr />
+  <% if @barber.photos.present? %>
+    <div class="row">
+      <% @barber.photos.each do |photo| %>
+        <div class="box2">
+          <%= image_tag photo.photo.url, class: 'gallery-pic' %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  <br />
+  <br />
+  <%= link_to "Add Photo", new_barber_barber_photo_path(@barber), class: 'btn btn-primary' %>
+  <br />
+  <br />
+</div>
+<br />
