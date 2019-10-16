@@ -1,8 +1,8 @@
 <br />
 <div class="booyah-box col-10 offset-1">
-  <h1>Become A Barber</h1>
+  <h1>Edit Barber Info</h1>
   <br />
-  <%= simple_form_for @barber, url: barber_barber_index_path do |f| %>
+  <%= simple_form_for @barber, url: barber_barber_path(@barber), method: :put do |f| %>
     <%= f.input :profile_picture %>
     <%= f.input :name %>
     <%= f.input :phone_number %>
@@ -10,7 +10,7 @@
     <%= f.input :barber_bio %>
     <%= f.input :booking_site_url %>
     <%= f.input :square_embed_code %>
-    <%= f.submit "Become a Barber", class: 'btn btn-primary' %>
+    <%= f.submit "Update Barber Profile", class: 'btn btn-primary' %>
   <% end %>
   <br />
 </div>

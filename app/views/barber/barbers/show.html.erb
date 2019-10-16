@@ -1,5 +1,8 @@
 <br />
 <div class="booyah-box col-10 offset-1">
+  <div class="text-center">
+    <%= image_tag @barber.profile_picture.url, class: 'me' %>
+  </div>
   <h1 class="text-center"><%= @barber.name %></h1>
   <p><b>Bio:</b> <%= @barber.barber_bio %></p>
   <p><b>Phone:</b> <%= @barber.phone_number %></p>

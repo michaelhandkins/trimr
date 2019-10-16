@@ -5,7 +5,7 @@
   <div class="text-center">
     <%= link_to "Edit Account Info", edit_user_registration_path(current_user), class: 'btn btn-success' %>
     <hr />
-    <%= link_to "Edit Barber Info", '#', class: 'btn btn-warning' %>
+    <%= link_to "Edit Barber Info", edit_barber_barber_path(current_user.barbers.first), class: 'btn btn-warning' %>
   </div>
 
 </div>

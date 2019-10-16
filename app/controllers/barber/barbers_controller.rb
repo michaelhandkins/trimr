@@ -18,6 +18,15 @@ class Barber::BarbersController < ApplicationController
     @barber = Barber.find(params[:id])
   end
 
+  def edit
+    @barber = current_user.barbers.first
+  end
+
+  def update
+    @barber = current_user.barbers.first.update(barber_params)
+    redirect_to barber_barber_path(current_user.barbers.first)
+  end
+
   private
 
   def barber_params
