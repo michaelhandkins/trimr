@@ -3,6 +3,7 @@
   <h1>Become A Barber</h1>
   <br />
   <%= simple_form_for @barber, url: barber_barbers_path do |f| %>
+    <%= f.input :profile_picture %>
     <%= f.input :name %>
     <%= f.input :phone_number %>
     <%= f.input :zip_code %>

@@ -1,4 +1,6 @@
 class Barber < ApplicationRecord
+  mount_uploader :profile_picture, PhotoUploader
+  
   belongs_to :user
   has_many :haircuts
   has_many :photos
