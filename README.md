@@ -31,8 +31,8 @@ From there, users will be able to customize their barber profile by adding hairc
 
 Also from the barber profile page, users may "Book an Appointment" with the selected barber. Choosing to do so redirects the user to the barber's Square Appointments page, via which the user may schedule an appointment with their personal details.
 
-![](square_appointments.PNG)
-![](calendar.PNG)
+![](images/square_appointments.PNG)
+![](images/calendar.PNG)
 
 
 
