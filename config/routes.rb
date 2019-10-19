@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   resource :barberdash, only: [:show]
   resource :dashboard, only: [:show]
   root "static_pages#index"
-  resources "static_pages"
+  get "team", to: 'static_pages#team'
+  get "careers", to: 'static_pages#careers'
+  get "privacy", to: 'static_pages#privacy'
   resources :barbers, only: [:index, :show]
   namespace :barber do
     resources :barbers, only: [:new, :create, :show, :edit, :update] do
