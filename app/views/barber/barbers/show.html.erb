@@ -47,7 +47,9 @@
     <p><b><%= haircut.haircut_name %></b> - $<%= haircut.cost %></p>
     <p><%= haircut.description %></p>
   <% end %>
-  <%= link_to "Add Haircut", barber_barber_haircuts_path(@barber), class: 'btn btn-success' %>
+  <% if user_signed_in? && @barber.user == current_user %>
+    <%= link_to "Add Haircut", barber_barber_haircuts_path(@barber), class: 'btn btn-success' %>
+  <% end %>
   <br />
   <hr />
   <div class="text-center">

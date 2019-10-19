@@ -5,8 +5,13 @@
   <div class="text-center">
     <%= link_to "Edit Account Info", edit_user_registration_path(current_user), class: 'btn btn-success' %>
     <hr />
-    <%= link_to "Edit Barber Info", edit_barber_barber_path(current_user.barbers.first), class: 'btn btn-warning' %>
+    <% if current_user.barbers.present? %>
+      <%= link_to "Edit Barber Info", edit_barber_barber_path(current_user.barbers.first), class: 'btn btn-warning' %>
+    <% else %>
+      <%= link_to "Become a Barber", new_barber_barber_path, class: 'btn btn-warning' %>
+    <% end %>
   </div>
+  <br />
 
 </div>
 <br />
