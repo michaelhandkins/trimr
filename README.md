@@ -34,5 +34,30 @@ Also from the barber profile page, users may "Book an Appointment" with the sele
 ![](images/square_appointments.PNG)
 ![](images/calendar.PNG)
 
+After submitting the appointment details, the user will receive a text letting them know their appointment request is being reviewed...
+
+![](images/user_confirmation.PNG)
+
+...and the barber will be alerted via text that they have an appointment to confirm.
+
+![](images/barber_request.PNG)
+![](images/barber_approval.PNG)
+
+Once approved, the user will be notified that their booking has been accepted by the barber.
+
+![](images/user_success.PNG)
+
+Every user will have access to the Dashboard. From the Dashboard users will be able to update their account settings.
+
+![](images/update_account.PNG)
+
+Users who are also barbers may update their barber info from the dashboard.
+
+![](images/edit_barber.PNG)
+
+This site is deployed at https://trimr-handkins.herokuapp.com/
+
+
+
 
 
