@@ -69,7 +69,9 @@
   <% end %>
   <br />
   <br />
-  <%= link_to "Add Photo", new_barber_barber_photo_path(@barber), class: 'btn btn-primary' %>
+  <% if user_signed_in? && @barber.user == current_user %>
+    <%= link_to "Add Photo", new_barber_barber_photo_path(@barber), class: 'btn btn-primary' %>
+  <% end %>
   <br />
   <br />
 </div>
