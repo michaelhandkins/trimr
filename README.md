@@ -1,24 +1,13 @@
-# README
+# Trimr
+Trimr is a two-sided service marketplace for barbers and hair-stylists looking to expand their practice beyond the studio and consumers looking to have their barber come to them on their time.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Technologies Used
+* Ruby, v. 2.5.3 (primary programming language)
+* Rails (framework)
+* Bootstrap (design elements)
+* Google Maps API (barber map placement)
+* Devise (user authentication)
+* Carrierwave (image uploading)
+* AWS (image storage)
+* Square Appointments
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
