@@ -1,4 +1,5 @@
 class Barber::HaircutsController < ApplicationController
+  before_action :authenticate_user!
 
   def new
     @haircut = current_barber.haircuts.new
@@ -29,8 +30,8 @@ class Barber::HaircutsController < ApplicationController
   end
 
   helper_method :current_haircut
-  def current_haircut
-    @current_haircut ||= Haircut.find(params[:id])
-  end
+    def current_haircut
+      @current_haircut ||= Haircut.find(params[:id])
+    end
 
 end

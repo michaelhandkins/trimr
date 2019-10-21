@@ -1,4 +1,5 @@
 class Barber::PhotosController < ApplicationController
+  before_action :authenticate_user!
   
   def new
     @photo = current_barber.photos.new
