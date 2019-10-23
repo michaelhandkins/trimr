@@ -6,6 +6,11 @@
     <%= f.input :profile_picture %>
     <%= f.input :name %>
     <%= f.input :phone_number %>
+    <%= f.input :city %>
+    <p>State</p>
+    <%= select_tag :state, options_for_select(us_states) %>
+    <br />
+    <br />
     <%= f.input :zip_code %>
     <%= f.input :barber_bio %>
     <%= f.input :booking_site_url %>

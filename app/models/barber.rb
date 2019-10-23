@@ -11,6 +11,8 @@ class Barber < ApplicationRecord
   validates :zip_code, presence: true
   validates :barber_bio, presence: true
   validates :booking_site_url, presence: true
+  validates :city, presence: true
+  validates :state, presence: true
 
   geocoded_by :zip_code
   after_validation :geocode
