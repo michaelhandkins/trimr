@@ -6,9 +6,9 @@
     <%= link_to "Edit Account Info", edit_user_registration_path(current_user), class: 'btn btn-success' %>
     <hr />
     <% if current_user.barbers.present? %>
-      <%= link_to "Edit Barber Info", edit_barber_barber_path(current_user.barbers.first), class: 'btn btn-warning' %>
+      <%= link_to "Edit Barber Info", edit_barber_barber_path(current_user.barbers.first), class: 'btn btn-success' %>
     <% else %>
-      <%= link_to "Become a Barber", new_barber_barber_path, class: 'btn btn-warning' %>
+      <%= link_to "Become a Barber", new_barber_barber_path, class: 'btn btn-success' %>
     <% end %>
   </div>
   <br />
