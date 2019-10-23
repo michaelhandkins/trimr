@@ -19,7 +19,12 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+    <%= f.input :city %>
+    <p>State</p>
+    <%= select_tag :state, options_for_select(us_states) %>
+
   </div>
+  <br />
 
   <div class="form-actions">
     <%= f.button :submit, "Sign up", class: "btn btn-success" %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_16_201504) do
+ActiveRecord::Schema.define(version: 2019_10_23_225604) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 2019_10_16_201504) do
     t.float "latitude"
     t.float "longitude"
     t.string "profile_picture"
+    t.string "city"
+    t.string "state"
     t.index ["user_id"], name: "index_barbers_on_user_id"
     t.index ["zip_code"], name: "index_barbers_on_zip_code"
   end
@@ -60,6 +62,8 @@ ActiveRecord::Schema.define(version: 2019_10_16_201504) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "city"
+    t.string "state"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
