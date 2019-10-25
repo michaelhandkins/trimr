@@ -2,6 +2,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css?family=Grenze&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
 
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -14,7 +15,7 @@
 }
 
 .booyah-box h1 {
-  font-family: 'DM Serif Text', serif;
+  font-family: 'Staatliches', cursive;
   font-weight: 200;
 }
 
@@ -27,8 +28,24 @@ body {
   font-size: 26px;
 }
 
+.navbar {
+  font-family: 'Staatliches', cursive;
+}
+
 html, body {
   height: 100%;
+}
+
+h2 {
+  font-family: 'Staatliches', cursive;
+}
+
+h3 {
+  font-family: 'Staatliches', cursive;
+}
+
+.btn {
+  font-family: 'Staatliches', cursive;
 }
 
 body {
@@ -45,7 +62,7 @@ body {
   width: 100%;
   min-height: 100px;
   background-color: #282a2e;
-  font-family: "Helvetica Neue", Helvetica;
+  font-family: 'Staatliches', cursive;
   padding-top: 10px;
   margin-top: 30px;
   font-weight: 100;
