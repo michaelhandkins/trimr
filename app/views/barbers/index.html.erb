@@ -1,11 +1,13 @@
 <br />
 <div class="booyah-box col-10 offset-1">
   <h1 class="text-center">Book A Barber</h1>
+  <hr />
+  <h5 class="text-center">Barbers Available Near You</h5>
+
   <div class="row">
     <% @barbers.each do |barber| %>
-      <div class="col-12">
-      <hr />
-      </div>
+      <% if barber.state == current_user.state && barber.city == current_user.city %>
+
         <div class="col-2">
           <%= image_tag barber.profile_picture.url, class: 'gallery-pic' %>
         </div>
@@ -14,6 +16,13 @@
           <p><b><%= barber.zip_code %></b></p>
           <p><i><%= barber.barber_bio %></i></p>
         </div>
+      <% else %>
+        <div class="col-12">
+          <br />
+          <h5 class="text-center sorry"><i>Sorry, there are no barbers near you!</i></h5>
+          <br />
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>
