@@ -1,0 +1,20 @@
+<br />
+<div class="booyah-box col-10 offset-1">
+  <h1 class="text-center">ALL BARBERS</h1>
+  <hr />
+
+  <div class="row">
+    <% @barbers.each do |barber| %>
+
+        <div class="col-2">
+          <%= image_tag barber.profile_picture.url, class: 'gallery-pic' %>
+        </div>
+        <div class="col-10">
+          <h3><%= link_to barber.name, barber_barber_path(barber) %></h3>
+          <p><b><%= barber.zip_code %></b></p>
+          <p><i><%= barber.barber_bio %></i></p>
+        </div>
+    <% end %>
+  </div>
+</div>
+<br />

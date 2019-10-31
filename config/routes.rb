@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "team", to: 'static_pages#team'
   get "careers", to: 'static_pages#careers'
   get "privacy", to: 'static_pages#privacy'
+  get "all_barbers", to: 'static_pages#all_barbers'
   resources :barbers, only: [:index, :show]
   namespace :barber do
     resources :barbers, only: [:new, :create, :show, :edit, :update] do
