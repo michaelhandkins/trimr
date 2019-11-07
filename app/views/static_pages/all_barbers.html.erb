@@ -11,7 +11,7 @@
         </div>
         <div class="col-10">
           <h3><%= link_to barber.name, barber_barber_path(barber) %></h3>
-          <p><b><%= barber.zip_code %></b></p>
+          <p><b><%= barber.city %>, <%= barber.state %></b></p>
           <p><i><%= barber.barber_bio %></i></p>
         </div>
     <% end %>
