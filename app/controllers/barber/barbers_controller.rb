@@ -10,12 +10,15 @@ class Barber::BarbersController < ApplicationController
   end
 
   def create
-
-    @barber = current_user.barbers.create(barber_params)
-    if @barber.valid?
-      redirect_to barber_barber_path(@barber)
+    if current_user.barbers.present?
+      return render plain: 'Unauthorized', status: :unauthorized
     else
-      render :new, status: :unprocessable_entity
+      @barber = current_user.barbers.create(barber_params)
+      if @barber.valid?
+        redirect_to barber_barber_path(@barber)
+      else
+        render :new, status: :unprocessable_entity
+      end
     end
   end
 
