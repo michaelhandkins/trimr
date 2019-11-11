@@ -5,29 +5,42 @@
   <h5 class="text-center">Barbers Available Near You</h5>
 
   <div class="row">
-    <% @barbers.each do |barber| %>
-      <% if barber.state == current_user.state && barber.city == current_user.city %>
+    <% if @barbers.present? %>
+      <% @barbers.each do |barber| %>
+        <% if barber.state == current_user.state && barber.city == current_user.city %>
 
-        <div class="col-2">
-          <%= image_tag barber.profile_picture.url, class: 'gallery-pic' %>
-        </div>
-        <div class="col-10">
-          <h3><%= link_to barber.name, barber_barber_path(barber) %></h3>
-          <p><b><%= barber.city %>, <%= barber.state %></b></p>
-          <p><i><%= barber.barber_bio %></i></p>
-        </div>
-      <% else %>
-        <div class="col-12">
-          <br />
-          <h5 class="text-center sorry"><i>Sorry, there are no barbers near you!</i></h5>
-          <br />
-          <div class="text-center">
-            <%= link_to "Browse All Barbers", all_barbers_path, class: 'btn btn-success' %>
+          <div class="col-2">
+            <%= image_tag barber.profile_picture.url, class: 'gallery-pic' %>
           </div>
-          <br />
-        </div>
+          <div class="col-10">
+            <h3><%= link_to barber.name, barber_barber_path(barber) %></h3>
+            <p><b><%= barber.city %>, <%= barber.state %></b></p>
+            <p><i><%= barber.barber_bio %></i></p>
+          </div>
+        <% else %>
+          <div class="col-12">
+            <br />
+            <h5 class="text-center sorry"><i>Sorry, there are no barbers near you!</i></h5>
+            <br />
+            <div class="text-center">
+              <%= link_to "Browse All Barbers", all_barbers_path, class: 'btn btn-success' %>
+            </div>
+            <br />
+          </div>
+        <% end %>
       <% end %>
+    <% else %>
+      <div class="col-12">
+        <br />
+        <h5 class="text-center sorry"><i>Sorry, there are no barbers near you!</i></h5>
+        <br />
+        <div class="text-center">
+          <%= link_to "Browse All Barbers", all_barbers_path, class: 'btn btn-success' %>
+        </div>
+        <br />
+      </div>
     <% end %>
+
   </div>
 </div>
 <br />
