@@ -6,12 +6,16 @@ class Barber::BarbersController < ApplicationController
   end
 
   def new
-    @barber = Barber.new
+    if current_user.barbers.present?
+      return render plain: 'You are already a barber!', status: :unauthorized
+    else
+      @barber = Barber.new
+    end
   end
 
   def create
     if current_user.barbers.present?
-      return render plain: 'Unauthorized', status: :unauthorized
+      return render plain: 'You are already a barber!', status: :unauthorized
     else
       @barber = current_user.barbers.create(barber_params)
       if @barber.valid?
